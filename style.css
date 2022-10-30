@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(150deg, #0f2b05, #000000);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+body * {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding: 15px 0 0px;
+  margin: 0 auto;
+}
+
+.card {
+  margin: 0 auto;
+  width: 264px;
+  height: 419px;
+
+  background-image: url(./assets/bg-explorer.svg);
+
+  user-select: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: appear 0.7s forwards;
+}
+
+#user-pic {
+  margin-left: 57px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f7dd43;
+
+  background: url(https://github.com/Prdsilva80.png) no-repeat center center fixed; 
+  background-size: cover;
+
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  margin-top: 100px;
+}
+
+.card-footer {
+  display: flex;
+  gap: 30px;
+}
+
+.card-footer > img {
+  margin-bottom: 25px;
+}
+
+.info {
+  display: flex;
+  gap: 12px;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 95px;
+
+  color: white;
+}
+
+#cardName {
+  width: 160px;
+}
+
+.info h1 {
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.info p {
+  font-size: 14px;
+  line-height: 160%;
+}
+
+.chosen-flag {
+  display: none;
+  margin-top: 5px;
+  height: 38px;
+}
+
+h2, label, button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin: 0 auto;
+}
+
+#choseTrack {
+  display: flex;
+  padding: 0 13px;
+  gap: 42px;
+
+  margin: 0 auto;
+  width: 264px;
+  height: 60px;
+
+  border-radius: 13px;
+  background-image: url(./assets/bg-chose-track.svg);
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  user-select: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  opacity: 0;
+  animation: ghost 0.7s forwards ease-in-out;
+  transition: 0.2s;
+}
+
+#choseTrack:hover {
+  scale: 1.03;
+}
+
+#choseTrack img {
+  max-width: 100px;
+}
+
+
+.user-panel {
+  margin: 0 auto 10px;
+
+  width: 264px;
+  height: 188px;
+  background: #373D98;
+  border-radius: 13px;
+  border: solid #4C55D2;
+  border-width: 5px 0px;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  opacity: 0;
+  transform: translateX(50px);
+  animation: appear 0.7s forwards;
+}
+
+.input-wrapper, .team-selection {
+  width: 220px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper input, .input-wrapper button {
+  width: 210px;
+  height: 24px;
+  border-radius: 13px;
+  padding: 0 8px;
+  border: none;
+
+  margin: 7px auto;
+}
+
+.input-wrapper button {
+  color: #F7DD43;
+  background: #047C3F;
+  border: 2px solid #F7DD43;
+  cursor: pointer;
+  appearance: none;
+}
+
+.input-wrapper button:hover {
+  background: #046635;
+}
+
+.team-selection .flags{
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flags img {
+  cursor: pointer;
+  user-select: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.flags img:hover {
+  scale: 1.05;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes ghost {
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 880px) {
+  body {
+    gap: 15px;
+  }
+
+  header {
+    padding: 20px 0 5px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    gap: 20px;
+  }
+  header {
+    padding: 30px 0 10px;
+  }
+
+  .card {
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: 1550px) {
+  header {
+    padding: 40px 0 10px;
+  }
+
+  .card {
+    margin: 10px auto 20px;
+  }
+}

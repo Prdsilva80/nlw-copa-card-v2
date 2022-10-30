@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Card NLW Copa</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.svg" alt="Logo NLW Copa" />
+    </header>
+
+    <div class="card">
+      <div id="user-pic"></div>
+      <div class="info">
+        <div class="info-wrapper">
+          <h1 id="cardName">Paulo Roberto</h1>
+          <p>Student at RocketSeat</p>
+        </div>
+        <div class="info-wrapper">
+          <img class="chosen-flag" src="./assets/flag-brazil.svg" alt="bandeira selecionada">
+          <img class="chosen-flag" src="./assets/flag-japan.svg" alt="bandeira do Japao">
+          <img class="chosen-flag" src="./assets/flag-german.svg" alt="bandeira da Alemanha">
+          <img class="chosen-flag" src="./assets/flag-french.svg" alt="bandeira da França">
+        </div>
+      </div>
+    </div>
+    <div id="choseTrack">
+      <img src="./assets/explorer-track.svg" alt="logo da trilha explorer">
+      <img src="./assets/ignite-track.svg" alt="logo da trilha ignite">
+    </div>
+
+    <div class="user-panel">
+      <div class="input-wrapper">
+        <label for="git-name">Digite o seu nome do Github:</label>
+        <input id="git-name" type="text" maxlength="20">
+        <button onclick="captureInput()">Personalizar</button>
+      </div>
+      <div class="team-selection">
+        <h2>Qual o seu time do evento?</h2>
+        <div class="flags">
+          <img class="button-flag" src="./assets/flag-brazil.svg" alt="bandeira do Brasil">
+          <img class="button-flag" src="./assets/flag-japan.svg" alt="bandeira do Japao">
+          <img class="button-flag" src="./assets/flag-german.svg" alt="bandeira da Alemanha">
+          <img class="button-flag" src="./assets/flag-french.svg" alt="bandeira da França">
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
